@@ -72,7 +72,9 @@ To encrypt/decrypt your fields automatically, you must configure your MongoClien
 ![alt text](https://rockelitix-ituwr.mongodbstitch.com/keyrotate.png "Title")
 
 # Credits
-https://github.com/mongodb-university/docs-in-use-encryption-examples is where I got most of the source code. I just modified a few things
+https://github.com/mongodb-university/docs-in-use-encryption-examples
+
+is where I got most of the source code. I just modified a few things
 
 # Code Setup: NODE
 - ` cd node `
