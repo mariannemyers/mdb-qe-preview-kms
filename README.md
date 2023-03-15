@@ -66,7 +66,7 @@ To encrypt/decrypt your fields automatically, you must configure your MongoClien
 
 # You can use these credentials to set up In-Use Encryption from Compass by setting up these Advanced Connection Settings
 
-![alt text](https://rockelitix-ituwr.mongodbstitch.com/azure.png "Title")
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/compass.png "Title")
 
 # Key Rotation
 ## Update your CMK using Azure KMS. Get the new key version. Login to your mongoshell (mongosh). And call KeyVault.rewrapManyDataKey() with the new Key Version. This method Decrypts multiple Data Encryption Keys (DEK) and re-encrypts them with a new Customer Master Key (CMK).
