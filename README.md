@@ -78,6 +78,14 @@ https://github.com/mongodb/specifications/blob/ed45dc95ca174a5832d653adec5a84218
 
 https://www.mongodb.com/docs/manual/reference/method/KeyVault.rewrapManyDataKey/
 
+Key Management Best Practices
+
+https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final
+
+https://csrc.nist.gov/publications/detail/sp/800-57-part-2/rev-1/final
+
+https://csrc.nist.gov/publications/detail/sp/800-57-part-3/rev-1/final
+
 
 
 # Credits
