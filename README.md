@@ -11,6 +11,10 @@ Before you can use Queryable Encryption, you must set up the following items in 
 - Atlas Cluster running MongoDB 6.2
 - Install specific driver dependencies.
 
+### For this tutorial/demo, you will also need to have mongocryptd or the shared_lib properly configured
+https://www.mongodb.com/docs/manual/core/queryable-encryption/reference/shared-library
+https://www.mongodb.com/docs/manual/core/queryable-encryption/reference/mongocryptd/
+
 ### You can set up Queryable Encryption using the following mechanisms:
 - Automatic Encryption: Enables you to perform encrypted read and write operations without you having to write code to specify how to encrypt fields.
 - Explicit Encryption: Enables you to perform encrypted read and write operations through your MongoDB driver's encryption library. You must specify the logic for encryption with this library throughout your application.
@@ -69,3 +73,15 @@ To encrypt/decrypt your fields automatically, you must configure your MongoClien
 # Key Rotation
 ## Update your CMK using Azure KMS. Get the new key version. Login to your mongoshell (mongosh). And call KeyVault.rewrapManyDataKey() with the new Key Version. This method Decrypts multiple Data Encryption Keys (DEK) and re-encrypts them with a new Customer Master Key (CMK).
 ![alt text](https://rockelitix-ituwr.mongodbstitch.com/keyrotate.png "Title")
+
+# Code Setup: NODE
+- ` cd node `
+- `npm i`
+- `node make_data_key.js` which sets up the encrypted collection with the supported queries and kms config
+- `node insert_encrypted_document.js`
+
+# Code Setup: JAVA (required maven installed)
+- `cd java`
+- `mvn clean compile`
+- `mvn compile exec:java -Dexec.mainClass="com.mongodb.qe.MakeDataKey" -Dexec.cleanupDaemonThreads=false`
+- `mvn compile exec:java -Dexec.mainClass="com.mongodb.qe.InsertEncryptedDocument" -Dexec.cleanupDaemonThreads=false`
