@@ -47,3 +47,25 @@ To encrypt/decrypt your fields automatically, you must configure your MongoClien
 ![alt text](https://www.mongodb.com/docs/manual/images/CSFLE_Read_Encrypted_Data.png "Title")
 
 # Now for the good stuff. Let's see some code in action!
+
+## Encrypted Collection for Queryable Encryption
+## First, we need to create our keyVault and our DEKs
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/step0-qe.png "Title")
+## Then, we can use the keyVault and DEKs to create an encrypted collection, and include details about what fields will be encrypted as well as what query_types will be supported for those fields.
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/step1-qe.png "Title")
+
+## After the encrypted collection is set up, it is now ready to be used
+
+# Setup your encrypted client with your KMS configuration and autoencrypt settings, and you're good to go.
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/cryptoclient.png "Title")
+
+# For the code to work, you will need to update your credentials
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/azure.png "Title")
+
+# You can use these credentials to set up In-Use Encryption from Compass by setting up these Advanced Connection Settings
+
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/azure.png "Title")
+
+# Key Rotation
+## Update your CMK using Azure KMS. Get the new key version. Login to your mongoshell (mongosh). And call KeyVault.rewrapManyDataKey() with the new Key Version. This method Decrypts multiple Data Encryption Keys (DEK) and re-encrypts them with a new Customer Master Key (CMK).
+![alt text](https://rockelitix-ituwr.mongodbstitch.com/keyrotate.png "Title")
