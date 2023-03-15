@@ -17,7 +17,7 @@ https://www.mongodb.com/docs/manual/core/queryable-encryption/reference/mongocry
 - Automatic Encryption: Enables you to perform encrypted read and write operations without you having to write code to specify how to encrypt fields.
 - Explicit Encryption: Enables you to perform encrypted read and write operations through your MongoDB driver's encryption library. You must specify the logic for encryption with this library throughout your application.
 
-Today we will be focusing on Automatic Encryption using MongoDB Atlas. But before, lets talk a little bit about Envelope Encryption - which is what Client Side Field Level Encryption works.
+Today we will be focusing on Automatic Encryption using MongoDB Atlas. But before, lets talk a little bit about Envelope Encryption - which is what Queryable Encryption uses under the hood.
 
 # Envelope Encryption
 An analogy that helped me understand this was - think of a "Lockbox".
