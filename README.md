@@ -71,6 +71,9 @@ To encrypt/decrypt your fields automatically, you must configure your MongoClien
 ## Update your CMK using Azure KMS. Get the new key version. Login to your mongoshell (mongosh). And call KeyVault.rewrapManyDataKey() with the new Key Version. This method Decrypts multiple Data Encryption Keys (DEK) and re-encrypts them with a new Customer Master Key (CMK).
 ![alt text](https://rockelitix-ituwr.mongodbstitch.com/keyrotate.png "Title")
 
+# Credits
+https://github.com/mongodb-university/docs-in-use-encryption-examples is where I got most of the source code. I just modified a few things
+
 # Code Setup: NODE
 - ` cd node `
 - `npm i`
