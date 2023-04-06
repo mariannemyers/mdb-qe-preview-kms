@@ -1,4 +1,4 @@
-# Queryable Encryption + Azure KMS + Automatic Encryption(Atlas)
+# Queryable Encryption + AWS KMS + Automatic Encryption(Atlas)
 
 ### What You Need
 Before you can use Queryable Encryption, you must set up the following items in your development environment:
@@ -7,7 +7,7 @@ Before you can use Queryable Encryption, you must set up the following items in 
 - Install a MongoDB Driver Compatible with Queryable Encryption
 - Atlas Cluster running MongoDB 6.2
 - Install specific driver dependencies.
-- Azure KMS + Azure KeyVault + Azure Key (which will be our "master key")
+- AWS KMS + AWS IAM User with in-line privileges (which will be our "master key")
 
 ### For this tutorial/demo, need to have mongocryptd or the shared_lib properly configured. This is a critical step
 https://www.mongodb.com/docs/manual/core/queryable-encryption/reference/shared-library
